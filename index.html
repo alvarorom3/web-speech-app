@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pegar texto</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="">
+            <h1>Speech API</h1>
+            <p>
+                Introducir texto en el input. Seleccionar voz en el menu. Cambiar velocidad del narrador.
+            </p>
+            <p>
+                Teclas: 'f'-Play; 'd'-Pause; 'g'-Cancel
+            </p>
+        </div>
+        <div class="">
+            <label for="lang-select">Seleccionar lenguaje:</label>
+            <select id="lang-select"></select><br>
+            <div class="velocity-range">
+                <div>
+                    <label for="rate">Velocidad</label><input type="range" min="0.5" max="2" value="1" step="0.1"
+                        id="rate" />
+                </div>
+                <div class="rate-value"><span>1</span></div>
+            </div>
+            <div>
+                <label for="rate">Marcador</label>
+                <input type="checkbox" id="checkbox">
+            </div>
+            <div class="controls">
+                <button id="play">Play</button>
+                <button id="pause">Pause</button>
+                <button id="cancel">Cancel</button>
+            </div>
+            <!-- <div>
+                    <label for="pitch">Pitch</label><input type="range" min="0" max="2" value="1" step="0.1" id="pitch" />
+                    <div class="pitch-value">1</div>
+                    <div class="clearfix"></div>
+                </div> -->
+        </div>
+        <div id="editableDiv" type="text" class="txt" contenteditable="true"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="pasteEvent.js"></script>
+</body>
+
+</html>
