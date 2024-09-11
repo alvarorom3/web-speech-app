@@ -29,7 +29,7 @@ document
 			.replace(/^\./gm, '') // delete dots at beggining of a line
 			.replace(/^\s{2,}}/gm, '') // delete double spaces
 			.replace(/(?<=[A-Za-z0-9,;()'"-])\r?\n/g, ' ') // line break not followed by some char
-			.replace(/[^a-zA-Z0-9.,!?;:()'"#@-\s]/g, '') // exclude chars
+			.replace(/[^a-zA-Z0-9.,!?;:()'"#@áéíóúÁÉÍÓÚ-\s]/g, '') // exclude chars
 			.replace(/\b(\w+)\.(\w+)\b/g, '$1 .$2') // file extensions (eg: hello.txt -> hello .text)
 			.trim();
 
